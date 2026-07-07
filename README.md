@@ -98,3 +98,4 @@ Stores daily weather measurements.
 - pgAdmin - Used to manage the PostgreSQL database and execute SQL queries.
 - Git - Used for version control and tracking project changes.
 - GitHub - Used to store the project repository and maintain commit history.
+

@@ -1,0 +1,9 @@
+# Project Summary
+
+This project analyzed historical weather data from New York, Phoenix, and Seattle using the Open-Meteo Archive API. Data was collected for the period January 1, 2024 through December 31, 2024. These cities were selected because they represent different climate patterns, allowing for meaningful comparisons in temperature, precipitation, and wind conditions.
+
+During the data profiling phase, several data quality checks were performed using pandas. The dataset was examined for missing values, duplicate records, incorrect data types, and unexpected value ranges. The weather data was initially returned in a nested JSON format, which required transformation into a tabular structure before analysis could be performed.
+
+To address these issues, the JSON responses were transformed into a pandas DataFrame and combined into a single dataset. Missing values and duplicate records were checked and removed if present, data types were validated, and weather measurements were reviewed to ensure values were within expected ranges. The cleaned dataset was then exported to a CSV file and loaded into a normalized PostgreSQL database for analysis.
+
+After loading the data, SQL queries were used to identify weather trends and answer business questions. The analysis showed that Phoenix recorded the highest temperature at 46.8 degrees Celsius and experienced 156 extreme temperature days above 35 degrees Celsius. July was identified as the hottest month of the year, while New York had the highest average precipitation. These findings demonstrate how an end-to-end ETL pipeline can be used to collect, clean, store, and analyze real-world weather data.
